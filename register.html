@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <style>
+        /* 复用登录页CSS样式（保持布局一致性） */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: '微软雅黑', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url('./image/login.png') no-repeat; /* 保持相同背景图 */
+            background-size: 100% 100%;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .back-btn {
+            /* 与登录页完全相同的返回按钮样式 */
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 8px 16px;
+            background: rgba(145, 145, 145, 0.2);
+            border: 1px solid rgba(145, 145, 145, 0.5);
+            border-radius: 8px;
+            color: #222;
+            text-decoration: none;
+            transition: background 0.3s;
+            font-weight: 700;
+        }
+
+        .back-btn:hover {
+            background: rgba(145, 145, 145, 0.3);
+        }
+
+        .register-box {
+            /* 复用登录框样式（仅类名调整为register-box） */
+            width: 400px;
+            padding: 40px;
+            background: rgba(145, 145, 145, 0.15);
+            border: 1px solid rgba(145, 145, 145, 0.5);
+            border-right: 1px solid rgba(145, 145, 145, 0.2);
+            border-bottom: 1px solid rgba(145, 145, 145, 0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        }
+
+        .register-box h2 {
+            color: #222;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .input-box {
+            /* 与登录页相同的输入框样式 */
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .input-box input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .register-btn {
+            /* 复用登录按钮样式（仅类名调整为register-btn） */
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .register-btn:hover {
+            background: #45a049;
+        }
+
+        .login-link {
+            /* 与登录页注册链接样式一致 */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-link a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- 左上角返回按钮（与登录页完全一致） -->
+    <a href="javascript:;" class="back-btn">← back</a>
+
+    <!-- 注册容器（与登录框结构一致） -->
+    <div class="register-box">
+        <h2>Users Register</h2>
+        <form>
+            <div class="input-box">
+                <input type="text" placeholder="请输入用户名" required>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="请输入邮箱" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="请输入密码" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="确认密码" required>
+            </div>
+            <button type="submit" class="register-btn">Sign Up</button>
+            <div class="login-link">
+                已有账号？<a href="log in.html">立即登录</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('.back-btn').addEventListener('click', function(){
+          location.href = './gbc.html'
+        });
+        document.querySelector('.register-btn').addEventListener('click', function(){
+          location.href = './log in.html'
+        });
+    </script>
+</body>
+</html>

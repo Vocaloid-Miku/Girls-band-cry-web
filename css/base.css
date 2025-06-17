@@ -1,0 +1,22 @@
+/* 基础公共样式：清除默认样式 + 设置通用样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+body {
+  font: 14px/1.5 "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+a {
+  color: #333;
+  text-decoration: none;
+} 

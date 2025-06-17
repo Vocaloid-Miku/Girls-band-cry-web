@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: '微软雅黑', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url(./image/login.png) no-repeat; /* 随机背景图 */
+            background-size: 100% 100%;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 左上角返回按钮 */
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 8px 16px;
+            background: rgba(145, 145, 145, 0.2);
+            border: 1px solid rgba(145, 145, 145, 0.5);
+            border-radius: 8px;
+            color: #222;
+            text-decoration: none;
+            transition: background 0.3s;
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            background: rgba(145, 145, 145, 0.3);
+        }
+
+        /* 毛玻璃登录框 */
+        .login-box {
+            width: 400px;
+            padding: 40px;
+            background: rgba(145, 145, 145, 0.15);
+            border: 1px solid rgba(145, 145, 145, 0.5);
+            border-right: 1px solid rgba(145, 145, 145, 0.2);
+            border-bottom: 1px solid rgba(145, 145, 145, 0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(15px); /* 毛玻璃核心属性 */
+            -webkit-backdrop-filter: blur(15px); /* 兼容webkit内核 */
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-box h2 {
+            color: #222;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .input-box input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #45a049;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register-link a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- 左上角返回按钮 -->
+    <a href="javascript:;" class="back-btn">← back</a>
+
+    <!-- 登录容器 -->
+    <div class="login-box">
+        <h2>Log In</h2>
+        <form>
+            <div class="input-box">
+                <input type="text" placeholder="请输入用户名" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="请输入密码" required>
+            </div>
+            <button type="submit" class="login-btn">Log In</button>
+            <div class="register-link">
+                还没有账号？<a href="./register.html">立即注册</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // 返回按钮功能
+        document.querySelector('.back-btn').addEventListener('click', function(){
+          location.href = './gbc.html'
+        });
+        document.querySelector('.login-btn').addEventListener('click', function(){
+          location.href = './gbc.html'
+        });
+
+    </script>
+</body>
+</html>

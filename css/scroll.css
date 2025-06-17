@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  flex-direction: column;
+}
+
+.container::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+.item {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  line-height: 100vh;
+  text-align: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+#scroll_1 {
+  background-image: url(../image/front_page.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#scroll_2 {
+  background-color: #dddadd;
+  position: relative;
+  overflow: hidden;
+}
+
+#scroll_3 {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #ff86be 0%, #ffd859 25%, #5ad0ff 50%, #ff5656 75%);
+    background-size: 300% 300%;
+
+}
+
+#scroll_4 {
+  position: relative;
+  background: linear-gradient(90deg, #ff86be 0%, #ffd859 25%, #5ad0ff 50%, #ff5656 75%);
+  background-size: 300% 300%;
+}
+
+#scroll_5 {
+  position: relative;
+  background-color: #dddadd;
+}
